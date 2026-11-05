@@ -2,7 +2,7 @@
 
 ## Objective and boundary
 
-This is a controlled, offline SC4010 lab investigating six *independent RSA weaknesses* across **four security acts**. Every public modulus is **exactly 2048 bits**. Success is possible because the fixture generator intentionally creates **insecure parameters or faulty operations**, not because RSA-2048 with sound keys and approved padding is generally broken.
+This is a controlled, offline lab investigating six *independent RSA weaknesses* across **four security acts**. Every public modulus is **exactly 2048 bits**. Success is possible because the fixture generator intentionally creates **insecure parameters or faulty operations**, not because RSA-2048 with sound keys and approved padding is generally broken.
 
 The main methodology is **six verified recoveries**, with exactly **two short algorithm comparisons**:
 

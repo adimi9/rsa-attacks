@@ -1,6 +1,6 @@
 # The Life and Death of a 2048-Bit RSA Key
 
-**SC4010 Applied Cryptography · Six vulnerabilities · Four acts · Two algorithmic extensions**
+**Six vulnerabilities · Four acts · Two algorithmic extensions**
 
 > **Research question:** How can an RSA system fail even when every public modulus is exactly **2048 bits**?
 

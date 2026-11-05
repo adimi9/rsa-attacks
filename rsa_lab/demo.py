@@ -158,7 +158,7 @@ def run_one(name: str, case: dict, audit: dict | None = None) -> dict:
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser=argparse.ArgumentParser(description='SC4010: six real-sized 2048-bit RSA attack demonstrations')
+    parser=argparse.ArgumentParser(description='six real-sized 2048-bit RSA attack demonstrations')
     parser.add_argument('--attack',choices=['all',*ATTACKS],default='all')
     parser.add_argument('--fixture',type=Path,default=DEFAULT)
     parser.add_argument('--audit-fixture',type=Path,default=AUDIT_DEFAULT,
