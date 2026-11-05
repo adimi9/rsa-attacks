@@ -49,12 +49,6 @@ python -m rsa_lab --fresh --no-pause
 python -m scripts.generate_audit --keys 100 --extra-pairs 2
 ```
 
-### The two short extensions
-
-**02 · Pairwise GCD → Batch GCD.** First, the code shows **four public keys**: Sensor A and Sensor B share a prime, while Office C and Gateway D are independent. It factors the vulnerable moduli and decrypts an example message. Then a separate public-only fixture contains **100 × 2048-bit moduli**, including **three deliberately shared-prime pairs (six compromised public keys)**. Pairwise GCD checks all **4,950** combinations. Batch GCD implements a **product tree and remainder tree** and recovers the same factors. The program checks agreement and prints both observed runtimes. **Batch GCD need not be faster for just 100 keys in pure Python**; its purpose here is to demonstrate a different, large-collection algorithm, not to claim a universal speedup.
-
-**05 · Single cube root → Håstad.** With **one** 2048-bit modulus, `e=3` and a 128-bit unpadded test secret, `m³ < n`, so the ciphertext is the exact integer cube: `m = ∛c`. For the **long** unpadded message in the next test, each individual ciphertext has undergone modular reduction, so the basic cube-root attack does not recover it. With **three different 2048-bit moduli**, however, CRT reconstructs `m³` and an exact cube root reveals the message. Secure randomized padding (e.g. RSA-OAEP) prevents these textbook attacks.
-
 ## Source structure
 
 ```text
