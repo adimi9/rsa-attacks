@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.DS_Store
+results/*.tmp
+results/*.csv
+results/*.json
+!results/example_results.json

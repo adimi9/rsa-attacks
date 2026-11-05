@@ -1,0 +1,94 @@
+[
+  {
+    "attack": "fermat",
+    "success": true,
+    "modulus_bits": 2048,
+    "detail": "Factors found after 519 Fermat increments; message: LAB-ONLY: archived contract amount=100; verified by factor recovery",
+    "work_units": 519,
+    "factor_bits": [
+      1024,
+      1024
+    ],
+    "factor_product_verified": true,
+    "seconds": 0.023205
+  },
+  {
+    "attack": "shared_prime",
+    "success": true,
+    "modulus_bits": 2048,
+    "detail": "sensor-A and sensor-B share a prime; decrypted: LAB-ONLY: device sensor-A confidential calibration data | 100-key audit: pairwise and batch GCD identified the same 6 compromised keys",
+    "work_units": 6,
+    "compromised_keys": [
+      "sensor-A",
+      "sensor-B"
+    ],
+    "shared_factor_bits": 1024,
+    "audit_keys": 100,
+    "audit_compromised_keys": [
+      "audit-pair-1-A",
+      "audit-pair-1-B",
+      "audit-pair-2-A",
+      "audit-pair-2-B",
+      "sensor-A",
+      "sensor-B"
+    ],
+    "audit_vulnerable_count": 6,
+    "audit_pairwise_comparisons": 4950,
+    "audit_pairwise_seconds": 0.090158,
+    "audit_batch_seconds": 0.148994,
+    "audit_product_tree_levels": 8,
+    "audit_algorithms_agree": true,
+    "audit_ambiguous_keys": [],
+    "seconds": 0.274316
+  },
+  {
+    "attack": "wiener",
+    "success": true,
+    "modulus_bits": 2048,
+    "detail": "Private exponent recovered (256 bits); decrypted: LAB-ONLY: private exponent deliberately too short",
+    "work_units": 162,
+    "private_exponent_bits": 256,
+    "recovered_factor_bits": [
+      1024,
+      1024
+    ],
+    "seconds": 0.003669
+  },
+  {
+    "attack": "common_modulus",
+    "success": true,
+    "modulus_bits": 2048,
+    "detail": "Recovered plaintext without private key: LAB-ONLY: textbook RSA reusing one modulus and plaintext",
+    "work_units": 1,
+    "seconds": 0.000849
+  },
+  {
+    "attack": "hastad",
+    "success": true,
+    "modulus_bits": 2048,
+    "detail": "One ciphertext: exact cube root recovered 128-bit demo secret; long message: single-ciphertext cube roots fail, but three ciphertexts + CRT recovered 171 plaintext bytes (SHA-256 verified; prefix='LAB-ONLY BROADCAST: transfer=50000'...)",
+    "work_units": 3,
+    "single_ciphertext_cube_root_succeeded": true,
+    "long_message_single_cube_roots_failed": true,
+    "recipient_modulus_bits": [
+      2048,
+      2048,
+      2048
+    ],
+    "seconds": 0.010641
+  },
+  {
+    "attack": "crt_fault",
+    "success": true,
+    "modulus_bits": 2048,
+    "detail": "One injected CRT residue fault -> GCD recovered both factors; recovered key now reproduces a VALID signature",
+    "work_units": 1,
+    "recovered_factor_bits": [
+      1024,
+      1024
+    ],
+    "correct_signature_verified": true,
+    "faulty_signature_verified": false,
+    "seconds": 0.024576
+  }
+]

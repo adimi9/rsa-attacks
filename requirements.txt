@@ -1,0 +1,2 @@
+cryptography>=41,<50
+sympy>=1.12,<2
